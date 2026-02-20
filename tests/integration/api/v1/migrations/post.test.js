@@ -12,7 +12,7 @@ test("POST to /api/v1/migrations should return 200", async () => {
   });
 
   const firstResponseBody = await firstResponse.json();
-  
+
   expect(firstResponse.status).toBe(201);
   expect(Array.isArray(firstResponseBody)).toBe(true);
   expect(firstResponseBody.length).toBeGreaterThan(0);
@@ -25,8 +25,8 @@ test("POST to /api/v1/migrations should return 200", async () => {
   );
 
   const secondResponseBody = await secondResponse.json();
-  
+
   expect(secondResponse.status).toBe(200);
   expect(Array.isArray(secondResponseBody)).toBe(true);
-  expect(secondResponseBody.length).toBe(0)
+  expect(secondResponseBody.length).toBe(0);
 });
